@@ -7,7 +7,7 @@ import com.ldm.ejemplojuegopiratas.Graficos.PixmapFormat;
 
 public class LoadingScreen extends Pantalla{
     public LoadingScreen(Juego juego) {
-        super(juego);
+        super(juego); // El constructor toma una instancia juego.
     }
 
     @Override
@@ -35,10 +35,11 @@ public class LoadingScreen extends Pantalla{
         Assets.pulsar = juego.getAudio().nuevoSonido("pulsar.ogg");
         Assets.ataque = juego.getAudio().nuevoSonido("ataque.ogg");
         Assets.derrota = juego.getAudio().nuevoSonido("derrota.ogg");
-
-
+        /*
+        En update() cargamos todas los Asssets Para ellos se crea un nuevo pixmap mediante g.new.Pixmap().
+         */
         Configuraciones.cargar(juego.getFileIO());
-        juego.setScreen(new MainMenuScreen(juego));
+        juego.setScreen(new MainMenuScreen(juego)); // Carga todas las Configuraciones.
     }
 
     @Override
@@ -58,7 +59,7 @@ public class LoadingScreen extends Pantalla{
     }
 
     @Override
-    public void dispose() {
+    public void dispose() { // Métodos necesarios para cumplir con la interface.
 
     }
 }

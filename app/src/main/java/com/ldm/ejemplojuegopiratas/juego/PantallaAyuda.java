@@ -24,7 +24,7 @@ public class PantallaAyuda extends Pantalla {
                     if(Configuraciones.sonidoHabilitado)
                         Assets.pulsar.play(1);
                     return;
-                }
+                } // Comprueba si la parte inferior de la pantalla ha sido pulsada.
             }
         }
     }
@@ -35,7 +35,7 @@ public class PantallaAyuda extends Pantalla {
         g.drawPixmap(Assets.fondo, 0, 0);
         g.drawPixmap(Assets.ayuda1, 64, 100);
         g.drawPixmap(Assets.botones, 256, 416, 0, 64, 64, 64);
-    }
+    } // Renderiza el fondo, la imagen de ayuda y el botón de la parte inferior derecha, que es la parte del gráfico botones en el que incluimos a todos los botones.
 
     @Override
     public void pause() {

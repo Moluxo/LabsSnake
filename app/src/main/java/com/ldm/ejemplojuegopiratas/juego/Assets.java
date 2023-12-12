@@ -26,6 +26,6 @@ public class Assets {
 
     public static Sonido pulsar;
     public static Sonido ataque;
-    public static Sonido derrota;
+    public static Sonido derrota;  // Continene todas las Assets utilizadas en el juego
 
 }
