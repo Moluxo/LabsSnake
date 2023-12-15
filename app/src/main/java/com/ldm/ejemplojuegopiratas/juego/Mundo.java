@@ -93,7 +93,7 @@ public class Mundo {
                 }else{
                     puntuacion += INCREMENTO_PUNTUACION_TIPO3;
                 }
-                
+
                 jollyroger.abordaje();
                 if (jollyroger.partes.size() == MUNDO_ANCHO * MUNDO_ALTO) {
                     finalJuego = true;
