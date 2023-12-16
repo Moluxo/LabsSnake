@@ -115,7 +115,7 @@ public class PantallaJuego extends Pantalla {
                 if(event.x > 256 && event.y > 416) {
                     mundo.jollyroger.girarDerecha();
                 }
-                //si tiene
+                //se guardan las coordenadas inciciales
                 x1 = event.x;
                 y1 = event.y;
                 Log.i("MOLUXO","x1: "+x1+" y1: "+y1);

@@ -1,5 +1,7 @@
 package com.ldm.ejemplojuegopiratas.juego;
 
+import android.util.Log;
+
 import java.util.Random;
 
 public class Mundo {
@@ -18,6 +20,7 @@ public class Mundo {
     public Botin botin;
     public boolean finalJuego = false;
     public int puntuacion = 0;
+    public int numBotines=0;
 
     // Array 2D para colocar un nuevo tripulante
     boolean campos[][] = new boolean[MUNDO_ANCHO][MUNDO_ALTO];
@@ -80,6 +83,7 @@ public class Mundo {
             jollyroger.avance();
             if (jollyroger.comprobarChoque()) {
                 finalJuego = true;
+                tick=TICK_INICIAL; //RESETEAMOS EL TICK
                 return;
             }
             // Comprueba si jollyRoger está compuesto por tantas celdas como partes hay en el mundo.
@@ -88,10 +92,13 @@ public class Mundo {
             if (head.x == botin.x && head.y == botin.y) {
                 if (Botin.TIPO_1 == botin.tipo){
                     puntuacion += INCREMENTO_PUNTUACION_TIPO1;
+                    numBotines+=1;
                 } else if (Botin.TIPO_2 == botin.tipo) {
                     puntuacion += INCREMENTO_PUNTUACION_TIPO2;
+                    numBotines+=1;
                 }else{
                     puntuacion += INCREMENTO_PUNTUACION_TIPO3;
+                    numBotines+=1;
                 }
 
                 jollyroger.abordaje();
@@ -105,8 +112,9 @@ public class Mundo {
                 //Comprueba si jollyRoger ha abordado 10 botines más. Si es así nuestro
                 //umbral se irá reduciendo, mediante tick_decremento al que le dimos un valor de 0,5.
                 // El tick será más corto, lo que hará que JollyRoger vaya más rápido.
-                if (puntuacion % 100 == 0 && tick - TICK_DECREMENTO > 0) {
+                if (numBotines % 5 == 0 && tick - TICK_DECREMENTO > 0) {
                     tick -= TICK_DECREMENTO;
+                    Log.i("MOLUXO","VELOCIDAD INCREMENTADA");
                 }
             }
         }
