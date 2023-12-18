@@ -36,6 +36,7 @@ public class PantallaJuego extends Pantalla {
     public PantallaJuego(Juego juego) {
         super(juego);
         mundo = new Mundo();
+        Assets.JingleBells.play();
     }
 
     // Obtiene los eventos TouchEvent y KeyEvent que tengan lugar.

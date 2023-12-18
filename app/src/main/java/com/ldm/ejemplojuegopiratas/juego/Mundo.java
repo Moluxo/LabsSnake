@@ -1,5 +1,6 @@
 package com.ldm.ejemplojuegopiratas.juego;
 
+import android.media.MediaPlayer;
 import android.util.Log;
 
 import java.util.Random;
