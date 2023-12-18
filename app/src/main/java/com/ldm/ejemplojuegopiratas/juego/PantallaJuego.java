@@ -52,6 +52,7 @@ public class PantallaJuego extends Pantalla {
         if(estado == EstadoJuego.Ejecutandose)
             updateRunning(touchEvents, deltaTime);
         if(estado == EstadoJuego.Pausado)
+
             updatePaused(touchEvents);
         if(estado == EstadoJuego.FinJuego)
             updateGameOver(touchEvents);
