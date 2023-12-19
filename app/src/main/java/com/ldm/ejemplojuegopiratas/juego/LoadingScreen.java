@@ -35,6 +35,8 @@ public class LoadingScreen extends Pantalla{
         Assets.pulsar = juego.getAudio().nuevoSonido("pulsar.ogg");
         Assets.ataque = juego.getAudio().nuevoSonido("ataque.ogg");
         Assets.derrota = juego.getAudio().nuevoSonido("derrota.ogg");
+        Assets.JingleBells = juego.getAudio().nuevaMusica("JingleBells.mp3");
+        Assets.JingleBells.play();
         /*
         En update() cargamos todas los Asssets Para ellos se crea un nuevo pixmap mediante g.new.Pixmap().
          */

@@ -22,7 +22,9 @@ public class MainMenuScreen extends Pantalla {
             if(event.type == TouchEvent.TOUCH_UP) { //ORIGINAL TOUCH_UP
                 if(inBounds(event, 0, g.getHeight() - 64, 64, 64)) { //sonido habilitado
                     Configuraciones.sonidoHabilitado = !Configuraciones.sonidoHabilitado;
+
                     if(Configuraciones.sonidoHabilitado)
+
                         Assets.pulsar.play(1); //esto hace que suene el sonidito ese
                 }
                 if(inBounds(event, 64, 220, 192, 42) ) {
